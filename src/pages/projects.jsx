@@ -3,47 +3,59 @@ import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoYaara from '@/images/logos/yaara.png'
+import logoPuddlshaker from '@/images/logos/puddleshaker.png'
+import logoBundlebox from '@/images/logos/bundlebox.png'
+import logoNotex from '@/images/logos/notex.png'
+import logoPython from '@/images/logos/python.png'
+import logoSaiki from '@/images/logos/saiki.png'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Yaara AI',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'An AI-powered tool that helps you write better and more engaging marketing content.',
+    link: { href: 'https://yaara.ai', label: 'yaara.ai' },
+    logo: logoYaara,
   },
   {
-    name: 'Animaginary',
+    name: 'Puddleshaker',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Experience shows from exciting artists, storytellers and creators.',
+    builtWith: 'Build with Next.js, Tailwind CSS and AWS Amplify.',
+    link: { href: 'https://getbundlebox.com', label: 'getbundlebox.com' },
+    logo: logoPuddlshaker,
   },
   {
-    name: 'HelioStream',
+    name: 'Bundlebox',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Increase your sales and profit margin by automating bulk-pack listings for Amazon.',
+    builtWith: 'Build with Next.js, Prisma and Supabase.',
+    link: { href: 'https://getbundlebox.com', label: 'getbundlebox.com' },
+    logo: logoBundlebox,
   },
   {
-    name: 'cosmOS',
+    name: 'Saiki',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      'Modern LMS for universities that focus on improving teachers and students experience.',
+    builtWith: 'Build with React.js, Django, and PostgresSQL.',
+    link: { href: 'https://github.com/progrmoiz/Saiki', label: 'github.com' },
+    logo: logoSaiki,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Notex',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Take notes on YouTube videos and share them with friends and the community.',
+    builtWith: 'Build with Firebase, React.js, and React-Router.',
+    link: { href: 'https://trynotex.web.app', label: 'trynotex.web.app' },
+    logo: logoNotex,
+  },
+  {
+    name: 'Python Snippets',
+    description:
+      "The most useful python snippets. It's quite popular on GitHub, with over 500 stars.",
+    link: { href: 'https://github.com/progrmoiz/python-snippets', label: 'github.com' },
+    logo: logoPython,
   },
 ]
 
@@ -62,7 +74,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
+        <title>Projects - Moiz Farooq</title>
         <meta
           name="description"
           content="Things I’ve made trying to put my dent in the universe."
@@ -70,7 +82,7 @@ export default function Projects() {
       </Head>
       <SimpleLayout
         title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        intro="I've worked on a lot of different projects over the years, and these are the ones that make me the proudest. A lot of them are open-source, so if you see something you like, feel free to check out the code and contribute your own ideas for improvement."
       >
         <ul
           role="list"
@@ -90,6 +102,11 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
+              {
+                project.builtWith && (
+                  <Card.Description>{project.builtWith}</Card.Description>
+                )
+              }
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
