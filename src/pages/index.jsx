@@ -274,9 +274,9 @@ export default function Home({ articles }) {
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             {"I'm"} Moiz, a software designer and entrepreneur based in Karachi City. 
-            I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I have a passion for building beautiful and user-friendly products. 
+            {" I'm"} also a big fan of open source and love to contribute to the 
+            community whenever I can.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
