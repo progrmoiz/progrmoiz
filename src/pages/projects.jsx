@@ -23,7 +23,7 @@ const projects = [
     description:
       'Experience shows from exciting artists, storytellers and creators.',
     builtWith: 'Build with Next.js, Tailwind CSS and AWS Amplify.',
-    link: { href: 'https://getbundlebox.com', label: 'getbundlebox.com' },
+    link: { href: 'https://puddleshaker.com', label: 'puddleshaker.com' },
     logo: logoPuddlshaker,
   },
   {
