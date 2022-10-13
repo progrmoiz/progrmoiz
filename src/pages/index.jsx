@@ -260,7 +260,7 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Moiz Farooq - Software designer, founder, and amateur astronaut
+          Moiz Farooq - Developer, writer, founder
         </title>
         <meta
           name="description"
